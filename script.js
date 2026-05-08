@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Total number of generated frames
     const totalFrames1 = 300; // From public/frames
-    const totalFrames2 = 240; // From public/frames 3
+    const totalFrames2 = 240; // From public/frames_3
     const totalFrames = totalFrames1 + totalFrames2; // 540
     const images = new Array(totalFrames);
     let framesLoaded = 0;
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         src = `public/frames/ezgif-frame-${numString}.jpg`;
                     } else {
                         const numString = (i - totalFrames1).toString().padStart(3, "0");
-                        src = `public/frames 3/ezgif-frame-${numString}.jpg`;
+                        src = `public/frames_3/ezgif-frame-${numString}.jpg`;
                     }
                     
                     images[index] = { img, loaded: false };
