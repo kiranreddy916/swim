@@ -454,15 +454,17 @@ canvas {
 .schedule-right {
     flex: 2;
     overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    -webkit-overflow-scrolling: touch;
 }
 .schedule-table {
     width: 100%;
+    min-width: 800px;
     border-collapse: collapse;
     background: rgba(10, 15, 30, 0.4);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-radius: 12px;
-    overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 .schedule-table th, .schedule-table td {
@@ -485,6 +487,13 @@ canvas {
     text-align: center;
     color: #ffffff;
     font-weight: 500;
+}
+.schedule-table th:first-child,
+.schedule-table td:first-child {
+    position: sticky;
+    left: 0;
+    background: #0b1120; /* Solid dark background to hide scrolled content */
+    z-index: 2;
 }
 .schedule-table td:first-child {
     font-weight: 700;
@@ -617,9 +626,14 @@ canvas {
     .testimonials-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
+    .nav-left .logo-text { display: none; }
+    .nav-right .btn-cyan { display: none; }
+    .main-headline { font-size: 2.5rem; }
     .facilities-grid { grid-template-columns: repeat(2, 1fr); }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     .form-row { flex-direction: column; }
+    .about-content { padding: 2rem 1.5rem; }
+    .solid-bg-wrapper { padding: 4rem 4%; }
 }
 
 /* Gallery Section */
